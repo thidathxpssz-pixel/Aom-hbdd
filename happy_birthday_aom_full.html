@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday AOM 🎉</title>
+<style>
+:root{
+  --main:#ff7ab6;
+  --accent:#d81b60;
+  --card-bg:#fffbe6;
+  --card-shadow:rgba(0,0,0,0.15);
+}
+body{
+  margin:0;
+  font-family:"Inter", sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:20px;
+  box-sizing:border-box;
+  background: linear-gradient(270deg,#ffdde1,#ffe6f7,#ffd1eb);
+  background-size:600% 600%;
+  animation: gradientMove 20s ease infinite;
+  overflow-x:hidden;
+  color:#222;
+}
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+header{text-align:center;margin:10px 0;}
+h1{margin:6px 0;color:var(--accent);font-size:2rem;animation:bounce 2s infinite;}
+h2{margin:0;font-weight:400;color:#444;}
+@keyframes bounce{
+  0%,20%,50%,80%,100%{transform:translateY(0);}
+  40%{transform:translateY(-10px);}
+  60%{transform:translateY(-5px);}
+}
+#Date{
+  background:var(--main);
+  color:white;
+  border:none;
+  padding:14px 26px;
+  border-radius:999px;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(216,27,96,0.3);
+  margin:16px 0;
+  transition:transform 0.2s;
+}
+#Date:hover{transform:scale(1.08);}
+#Date:disabled{opacity:.6;cursor:default;}
+
+.card-container{width:320px;max-width:90%;height:auto;perspective:1200px;margin:18px auto;position:relative;}
+.card-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform 0.9s cubic-bezier(.2,.9,.3,1);border-radius:16px;}
+.card-container.flipped .card-inner{transform:rotateY(180deg);}
+.card-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;overflow:hidden;box-shadow:0 12px 30px var(--card-shadow);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;background:var(--card-bg);padding:12px;box-sizing:border-box;transition:0.5s;}
+.card-front img,.card-back img{width:100%;height:auto;max-height:50%;object-fit:cover;}
+.card-back{transform:rotateY(180deg);position:relative;}
+.card-back .message{background:rgba(255,255,255,0.8);border-radius:12px;padding:12px;margin-top:10px;width:100%;box-sizing:border-box;box-shadow:0 4px 12px rgba(0,0,0,0.1);line-height:1.5;}
+.card-back .message h3{margin:0 0 8px 0;color:var(--accent);}
+.card-back .message p{margin:0 0 6px 0;font-size:14px;}
+.card-back .message img{width:40px;margin:0 4px;vertical-align:middle;}
+.avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 8px;animation: spin 6s linear infinite;}
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+#status{margin-top:8px;color:#444;font-size:14px;}
+
+.star{position:absolute;width:4px;height:4px;background:white;border-radius:50%;animation:twinkle 2s infinite;}
+@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}
+
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<audio id="Tanav" loop preload="auto" src="https://jennierubyjanenini.github.io/Music-K-Files/happy%20birthday%20to%20you%20female%20voice%20wishes.mp3"></audio>
+
+<header>
+<h1>🎉 สุขสันต์วันเกิด ออม 🎂</h1>
+<h2>กดปุ่มเพื่อเซอร์ไพรส์ได้เลย</h2>
+</header>
+
+<button id="Date" type="button">เริ่มเซอร์ไพรส์ (กดเลย)</button>
+<div id="status"></div>
+
+<div class="card-container" id="cardContainer">
+<div class="card-inner">
+  <div class="card-face card-front">
+    <img src="https://i.gifer.com/origin/6a/6a5dc02cd17893a5ac3cb69f99035e78_w200.webp" alt="front">
+    <div class="message">
+      <h3>รหัสเซอร์ไพรส์</h3>
+      <p>พิมพ์รหัส: <strong>aom</strong></p>
+      <p>เพื่อเปิดข้อความอวยพร 🎁</p>
+    </div>
+  </div>
+  <div class="card-face card-back">
+    <img src="https://s3-whjr-v2-prod-bucket.whjr.online/8536ab4d-2b37-4263-a0d6-0d28bc41131d.jpeg" alt="back">
+    <div class="message">
+      <h3>🎂 ข้อความอวยพร</h3>
+      <p>สุขสันต์วันเกิดนะ ออม 💕</p>
+      <p>เพื่อนแบบมึงหายาก ทั้งแปลก ฮา ซื่อสัตย์ และอยู่ข้างกันเสมอ</p>
+      <p>พวกเราเติบโตด้วยกัน ร้องไห้ด้วยกัน สนุกด้วยกัน</p>
+      <p>ขอให้มีความสุขมากๆ ตลอดปีนี้ 🎉</p>
+      <img src="https://i.gifer.com/origin/2/2f5f0f9149e7d7f8f43bff198ce72a12_w200.webp" alt="cake">
+      <img src="https://i.gifer.com/origin/2/2f5f0f9149e7d7f8f43bff198ce72a12_w200.webp" alt="cake">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="extras">
+<img class="avatar" src="https://i.gifer.com/origin/f9/f90fc85cf18e351c565692dcb1c0feeb_w200.webp" alt="avatar">
+<div><strong>ออม เพื่อนรัก</strong></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+const audio=document.getElementById('Tanav');
+const btn=document.getElementById('Date');
+const status=document.getElementById('status');
+const cardContainer=document.getElementById('cardContainer');
+
+cardContainer.addEventListener('click',()=>cardContainer.classList.toggle('flipped'));
+
+btn.addEventListener('click',async()=>{
+  btn.disabled=true;
+  status.textContent='🎶 เพลงกำลังเล่น...';
+  try{await audio.play();}catch(e){console.log(e);}
+  cardContainer.classList.add('flipped');
+  startConfetti(8000);
+  btn.textContent='🎉 เซอร์ไพรส์แล้ว!';
+});
+
+function startConfetti(duration=5000){
+  const end=Date.now()+duration;
+  (function frame(){
+    confetti({particleCount:8,spread:90,origin:{y:0.6}});
+    confetti({particleCount:5,spread:120,origin:{y:0.6}});
+    if(Date.now()<end) requestAnimationFrame(frame);
+  })();
+}
+
+// ดาวสุ่ม
+const starContainer=document.getElementById('stars');
+for(let i=0;i<40;i++){
+  const star=document.createElement('div');
+  star.className='star';
+  star.style.left=Math.random()*100+'vw';
+  star.style.top=Math.random()*100+'vh';
+  star.style.animationDuration=(1+Math.random()*2)+'s';
+  starContainer.appendChild(star);
+}
+</script>
+</body>
+</html>
